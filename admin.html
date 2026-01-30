@@ -1,0 +1,19 @@
+<h2>Admin Panel</h2>
+
+<h3>Add Course</h3>
+<form method="post">
+Title: <input type="text" name="title"><br>
+Description: <input type="text" name="description"><br>
+<button type="submit">Add</button>
+</form>
+
+<h3>Courses</h3>
+{% for c in courses %}
+<p>{{c[1]}} <a href="/delete_course/{{c[0]}}">Delete</a></p>
+{% endfor %}
+
+<h3>Students</h3>
+{% for s in students %}
+<p>{{s[0]}} - {{s[1]}}</p>
+{% endfor %}
+<a href="/logout">Logout</a>
