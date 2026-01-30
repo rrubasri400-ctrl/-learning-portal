@@ -1,0 +1,5 @@
+<h2>Available Courses</h2>
+{% for c in courses %}
+<p>{{c[1]}} - {{c[2]}} <a href="/enroll/{{c[0]}}">Enroll</a></p>
+{% endfor %}
+<a href="/logout">Logout</a>
